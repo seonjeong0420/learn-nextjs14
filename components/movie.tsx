@@ -18,8 +18,10 @@ const Movie = ({ title, id, poster_path }: Props) => {
   };
   return (
     <div key={id} className={styles.movie}>
-      <img src={poster_path} alt={title} onClick={() => onClick} />
-      <Link href={`/movies/${id}`}>{title}</Link>
+      <Link prefetch href={`/movies/${id}`}>
+        <img src={poster_path} alt={title} onClick={() => onClick} />
+        {title}
+      </Link>
     </div>
   );
 };
