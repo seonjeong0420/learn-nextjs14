@@ -13,7 +13,6 @@ async function getVideos(id: string) {
 
 const MovieVideos = async ({ id }: Props) => {
   const videos = await getVideos(id);
-  console.log(videos);
 
   return (
     <div className={styles.container}>

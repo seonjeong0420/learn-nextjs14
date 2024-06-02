@@ -207,3 +207,7 @@ React에서 제공해주는 컴포넌트
 ### Error Page
 
 error.tsx 파일은 "use client"가 무조건 있어야 한다.
+
+## Dynamic Metadata
+
+[generateMetadata](https://nextjs.org/docs/app/api-reference/functions/generate-metadata)
