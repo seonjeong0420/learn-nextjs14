@@ -1,9 +1,12 @@
 import React, { Suspense } from "react";
-import { API_URL } from "../../../(home)/page";
 import MovieVideos from "../../../../components/movie-videos";
 import MovieInfo from "../../../../components/movie-info";
 
-const MovieDetail = async ({ params: { id } }: { params: { id: string } }) => {
+interface IParams {
+  params: { id: string };
+}
+
+const MovieDetail = async ({ params: { id } }: IParams) => {
   return (
     <div>
       {/* 둘다 asyc 컴포넌트이ㅣ므로, Suspense 컴포넌트로 감싸서 await 해주어야 한다.
