@@ -2,12 +2,11 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/home.module.css";
 import Movie from "../../components/movie";
+import { API_URL } from "../constants";
 
 export const metadata = {
   title: "HOME",
 };
-
-export const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
 async function getMovies() {
   return fetch(API_URL).then((response) => response.json());
