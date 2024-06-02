@@ -7,7 +7,7 @@ type Props = {
 
 async function getMovie(id: string) {
   await new Promise((resolve) => setTimeout(resolve, 2000));
-  throw new Error("something Broke");
+  // throw new Error("something Broke");
 
   const response = await fetch(`${API_URL}/${id}`);
   return response.json();
